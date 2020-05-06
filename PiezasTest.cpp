@@ -40,5 +40,5 @@ TEST(PiezasTest, resetTest){
 TEST(PiezasTest, dropPieceTest){
 	Piezas board;
 	board.dropPiece(0);
-	ASSERT_NE(board.pieceAt(BOARD_ROWS,0), Blank);
+	ASSERT_EQ(board.pieceAt(BOARD_ROWS,0), X);
 }
