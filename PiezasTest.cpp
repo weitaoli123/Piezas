@@ -50,7 +50,7 @@ TEST(PiezasTest, dropPieceTest){
 TEST(PiezasTest, gameStateTest){
 	Piezas board;
 	ASSERT_EQ(board.gameState(), Blank);
-	for(int j = 0; j < BOARD_COLSS; j++){
+	for(int j = 0; j < BOARD_COLS; j++){
 		for(int i = 0; i < BOARD_ROWS; i++){
 			board.dropPiece(j)
 		}	
