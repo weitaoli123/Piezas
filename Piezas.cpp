@@ -54,7 +54,7 @@ Piece Piezas::dropPiece(int column)
         turn = O;
     else
         turn == X;
-    if(column >=  BOARD_COLS)
+    if(column >=  BOARD_COLS || column < 0)
         return Invalid;
     else if(board[0][column] != Blank)
         return Blank;
@@ -76,7 +76,9 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-    return Blank;
+    if(row >= BOARD_ROWS || row < 0 || column >= BOARD_COLS || column < 0)
+        return Invalid;
+    return board[row][column];
 }
 
 /**
@@ -90,5 +92,41 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState()
 {
-    return Blank;
+    int score = 0;
+    Piece winner = Blank;
+    for(int i = 0; i < BOARD_ROWS; i++)
+    {
+        for(int j = 0; j < BOARD_COLS; j++)
+        {
+            if(board[i][j] == Blank)
+                return Invalid;
+            int row_adj = 0;
+            int col_adj = 0;
+            for(int k = j; k < BOARD_COLS; k++)
+            {
+                if(board[i][j] == board[i][k]
+                   row_adj++;
+                else
+                   break;
+            }
+           for(int k = i; k < BOARD_ROWS; k++)
+            {
+                if(board[k][j] == board[k][j]
+                   col_adj++;
+                else
+                   break;
+            }
+            if(row_adj > score)
+            {
+                   score = row_adj;
+                   winner = board[i][j];
+            }
+            if(col_adj > score)
+            {
+                   score = row_adj;
+                   winner = board[i][j];
+            }
+        }
+    }
+    return winner;
 }
