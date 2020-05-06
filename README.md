@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/weitaoli123/Piezas.svg?branch=master)](https://travis-ci.org/weitaoli123/Piezas) [![Coverage Status](https://coveralls.io/repos/github/weitaoli123/Piezas/badge.svg)](https://coveralls.io/github/weitaoli123/Piezas)
-# Piezas
+[![Build Status](https://travis-ci.org/weitaoli123/Piezas.svg?branch=master)](https://travis-ci.org/weitaoli123/Piezas)
+[![Coverage Status](https://coveralls.io/repos/github/weitaoli123/Piezas/badge.svg?branch=master)](https://coveralls.io/github/weitaoli123/Piezas?branch=master)
 
 ## Associated Enumerated Types
 `Piece` has four possible values: `X`,`O`,`Invalid`, and `Blank`
