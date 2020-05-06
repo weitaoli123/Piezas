@@ -58,23 +58,23 @@ TEST(PiezasTest, gameStateTest1){
 	ASSERT_EQ(board.gameState(), Blank);
 }
 
-TEST(PiezasTest, gameStateTest){
+TEST(PiezasTest, gameStateTest2){
 	Piezas board;
 	
 	board.dropPiece(0);
-	board.dropPiece(3);
 	board.dropPiece(0);
-	board.dropPiece(3);
-	
+	board.dropPiece(1);
 	board.dropPiece(0);
-	board.dropPiece(2);
-	board.dropPiece(3);
-	board.dropPiece(2);
 	
 	board.dropPiece(2);
 	board.dropPiece(1);
+	board.dropPiece(3);
 	board.dropPiece(1);
-	board.dropPiece(1);
+	
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(3);
 	
 	ASSERT_EQ(board.gameState(), X);
 }
