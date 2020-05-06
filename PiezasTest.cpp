@@ -40,6 +40,9 @@ TEST(PiezasTest, resetTest){
 
 TEST(PiezasTest, dropPieceTest){
 	Piezas board;
-	board.dropPiece(0);
-	ASSERT_NE(board.pieceAt(BOARD_ROWS-1,0), Blank);
+	ASSERT_NE(board.dropPiece(0), Blank);
+	ASSERT_EQ(board.dropPiece(BOARD_COLS), Invalid);
+	ASSERT_NE(board.dropPiece(0), Blank);
+	ASSERT_NE(board.dropPiece(0), Blank);
+	ASSERT_EQ(board.dropPiece(0), Blank);
 }
