@@ -47,7 +47,7 @@ TEST(PiezasTest, dropPieceTest){
 	ASSERT_EQ(board.dropPiece(0), Blank);
 }
 
-TEST(PiezasTest, gameStateTest){
+TEST(PiezasTest, gameStateTest1){
 	Piezas board;
 	ASSERT_EQ(board.gameState(), Invalid);
 	for(int j = 0; j < BOARD_COLS; j++){
@@ -56,4 +56,25 @@ TEST(PiezasTest, gameStateTest){
 		}	
 	}
 	ASSERT_EQ(board.gameState(), Blank);
+}
+
+TEST(PiezasTest, gameStateTest){
+	Piezas board;
+	
+	board.dropPiece(0);
+	board.dropPiece(3);
+	board.dropPiece(0);
+	board.dropPiece(3);
+	
+	board.dropPiece(0);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	
+	board.dropPiece(2);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	
+	ASSERT_EQ(board.gameState(), X);
 }
