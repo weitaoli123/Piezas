@@ -29,3 +29,11 @@ TEST(PiezasTest, ConstructorTest){
 		}
 	}
 }
+
+TEST(PiezasTest, Test1){
+	Piezas board;
+	board.dropPiece(0);
+	ASSERT_NE(board.pieceAt(BOARD_ROWS,0), Blank);
+	board.reset();
+	ASSERT_EQ(board.pieceAt(BOARD_ROWS,0), Blank);
+}
