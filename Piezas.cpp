@@ -53,7 +53,7 @@ Piece Piezas::dropPiece(int column)
     if(turn == X)
         turn = O;
     else
-        turn == X;
+        turn = X;
     if(column >=  BOARD_COLS || column < 0)
         return Invalid;
     else if(board[0][column] != Blank)
@@ -104,14 +104,14 @@ Piece Piezas::gameState()
             int col_adj = 0;
             for(int k = j; k < BOARD_COLS; k++)
             {
-                if(board[i][j] == board[i][k]
+                if(board[i][j] == board[i][k])
                    row_adj++;
                 else
                    break;
             }
            for(int k = i; k < BOARD_ROWS; k++)
             {
-                if(board[k][j] == board[k][j]
+                if(board[k][j] == board[k][j])
                    col_adj++;
                 else
                    break;
