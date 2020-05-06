@@ -34,11 +34,11 @@ TEST(PiezasTest, resetTest){
 	Piezas board;
 	board.dropPiece(0);
 	board.reset();
-	ASSERT_EQ(board.pieceAt(BOARD_ROWS,0), Blank);
+	ASSERT_EQ(board.pieceAt(BOARD_ROWS-1,0), Blank);
 }
 
 TEST(PiezasTest, dropPieceTest){
 	Piezas board;
 	board.dropPiece(0);
-	ASSERT_EQ(board.pieceAt(BOARD_ROWS,0), X);
+	ASSERT_NE(board.pieceAt(BOARD_ROWS-1,0), Blank);
 }
