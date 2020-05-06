@@ -111,7 +111,7 @@ Piece Piezas::gameState()
             }
            for(int k = i; k < BOARD_ROWS; k++)
             {
-                if(board[k][j] == board[k][j])
+                if(board[i][j] == board[k][j])
                    col_adj++;
                 else
                    break;
