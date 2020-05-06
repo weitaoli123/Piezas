@@ -28,7 +28,6 @@ TEST(PiezasTest, ConstructorTest){
 			ASSERT_EQ(board.pieceAt(i,j), Blank);	  
 		}
 	}
-	ASSERT_EQ(board.turn,X)
 }
 
 TEST(PiezasTest, resetTest){
