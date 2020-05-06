@@ -20,8 +20,12 @@ TEST(PiezasTest, sanityCheck)
 }
 
 TEST(PiezasTest, ConstructorTest){
-  Piezas board;
-  std::vector < std::vector<Piece> > test_board = 
-  	{{Blank, Blank, Blank, Blank}, {Blank, Blank, Blank, Blank},{Blank, Blank, Blank, Blank}};
-  ASSERT_EQ(board, test_board);
+	Piezas board;
+	for(int i = 0; i < BOARD_ROWS; i++)
+	{
+		for(int j = 0; j < BOARD_COLS; j++)
+		{
+			ASSERT_EQ(board.pieceAt(i,j), Blank);	  
+		}
+	}
 }
