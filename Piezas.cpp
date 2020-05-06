@@ -92,8 +92,8 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState()
 {
-    int score = 0;
-    Piece winner = Blank;
+    int x_score = 0;
+    int o_score = 0;
     for(int i = 0; i < BOARD_ROWS; i++)
     {
         for(int j = 0; j < BOARD_COLS; j++)
@@ -116,17 +116,26 @@ Piece Piezas::gameState()
                 else
                    break;
             }
-            if(row_adj > score)
+            if(board[i][j] == X)
             {
-                   score = row_adj;
-                   winner = board[i][j];
+                if(row_adj > score)
+                       x_score = row_adj;
+                if(col_adj > score)
+                       x_score = row_adj;
             }
-            if(col_adj > score)
+            else
             {
-                   score = row_adj;
-                   winner = board[i][j];
+                if(row_adj > score)
+                       o_score = row_adj;
+                if(col_adj > score)
+                       o_score = row_adj;
             }
         }
     }
-    return winner;
+    if(x_score > o_score)
+        return X;
+    else if(o_score > x_score)
+        return O;
+    else 
+        return Blank;
 }
