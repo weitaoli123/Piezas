@@ -46,3 +46,13 @@ TEST(PiezasTest, dropPieceTest){
 	ASSERT_NE(board.dropPiece(0), Blank);
 	ASSERT_EQ(board.dropPiece(0), Blank);
 }
+
+TEST(PiezasTest, gameStateTest){
+	Piezas board;
+	ASSERT_EQ(board.gameState(), Blank);
+	for(int j = 0; j < BOARD_COLSS; j++){
+		for(int i = 0; i < BOARD_ROWS; i++){
+			board.dropPiece(j)
+		}	
+	}
+}
