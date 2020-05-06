@@ -100,7 +100,7 @@ TEST(PiezasTest, gameStateTest3){
 	ASSERT_EQ(board.gameState(), Blank);
 }
 
-TEST(PiezasTest, gameStateTest2){
+TEST(PiezasTest, gameStateTest4){
 	Piezas board;
 	
 	board.dropPiece(0);
