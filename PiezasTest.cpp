@@ -18,3 +18,10 @@ TEST(PiezasTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
+
+TEST(PiezasTest, ConstructorTest){
+  Piezas board;
+  std::vector < std::vector<Piece> > test_board = 
+  	{{Blank, Blank, Blank, Blank}, {Blank, Blank, Blank, Blank},{Blank, Blank, Blank, Blank}};
+  ASSERT_EQ(board, test_board);
+}
