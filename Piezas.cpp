@@ -118,16 +118,16 @@ Piece Piezas::gameState()
             }
             if(board[i][j] == X)
             {
-                if(row_adj > score)
+                if(row_adj > x_score)
                        x_score = row_adj;
-                if(col_adj > score)
+                if(col_adj > x_score)
                        x_score = row_adj;
             }
             else
             {
-                if(row_adj > score)
+                if(row_adj > o_score)
                        o_score = row_adj;
-                if(col_adj > score)
+                if(col_adj > o_score)
                        o_score = row_adj;
             }
         }
