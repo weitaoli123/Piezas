@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/weitaoli123/Piezas.svg?branch=master)](https://travis-ci.org/weitaoli123/Piezas)
+[![Build Status](https://travis-ci.org/weitaoli123/Piezas.svg?branch=master)](https://travis-ci.org/weitaoli123/Piezas) [![Coverage Status](https://coveralls.io/repos/github/weitaoli123/Piezas/badge.svg)](https://coveralls.io/github/weitaoli123/Piezas)
 # Piezas
 
 ## Associated Enumerated Types
