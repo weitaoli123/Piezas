@@ -28,12 +28,18 @@ TEST(PiezasTest, ConstructorTest){
 			ASSERT_EQ(board.pieceAt(i,j), Blank);	  
 		}
 	}
+	ASSERT_EQ(board.turn,X)
 }
 
-TEST(PiezasTest, Test1){
+TEST(PiezasTest, resetTest){
+	Piezas board;
+	board.dropPiece(0);
+	board.reset();
+	ASSERT_EQ(board.pieceAt(BOARD_ROWS,0), Blank);
+}
+
+TEST(PiezasTest, dropPieceTest){
 	Piezas board;
 	board.dropPiece(0);
 	ASSERT_NE(board.pieceAt(BOARD_ROWS,0), Blank);
-	board.reset();
-	ASSERT_EQ(board.pieceAt(BOARD_ROWS,0), Blank);
 }
